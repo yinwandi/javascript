@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span class="witer">爆炸</span>
+
+	<input type="button" value="解除爆炸" class="but">
+	<script src="script/jquery.js"></script>
+	<script>
+	n=0
+    function fun(){
+      $(".witer").text("pengpeng")
+
+    }
+     var t=setTimeout(fun,3000)
+     $(".but").click(function(){
+     	clearTimeout(t)
+     })
+	</script>
+</body>
+</html>

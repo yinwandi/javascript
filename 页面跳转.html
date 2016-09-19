@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	页面<span class="nub"></span>秒钟跳转到百度
+	<script src="script/jquery.js"></script>
+	<script>
+	var n=5
+	function fun(){
+		$(".nub").text(n);
+        n--;
+        if(n==0){
+          location.href="http://baidu.com";	
+        }
+	}
+	setInterval(fun,1000)
+ 
+   
+	</script>
+</body>
+</html>

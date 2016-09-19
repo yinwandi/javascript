@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/bootstrap.css">
+</head>
+<body>
+	<input type="button" value="按年龄排序" class="but1">
+	<input type="button" value="按年龄排序" class="but2">
+	<table class="table table-striped table-hover">
+		<thead>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>成绩</th>
+		</thead>
+		<tbody></tbody>
+		
+	</table>
+    <script src="script/jquery.js"></script>
+    <script src="data.js"></script>
+    <script>
+        show(student.data);
+
+        $(".but1").click(function(){
+             student.age();
+             show(student.data);
+        })
+        $(".but2").click(function(){
+             student.score();
+             show(student.data);
+        })
+
+
+        function show(array){
+        	$("table tbody").empty();
+	        for(var x in array){
+	         	var $tr=$("<tr>");
+	        	for(var y in array[x]){
+	               var txt=array[x][y];
+	               var $td=$("<td>");
+	               $td.text(txt);
+	               $tr.append($td);
+	        	}
+	        	$("table tbody").append($tr);
+	        }
+        }
+    </script>
+</body>
+</html>

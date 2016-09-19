@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="抽奖" class="luck">
+	<script>
+	   var oluck=document.querySelector(".luck")
+       
+      
+        
+       oluck.onclick=function(){  
+           var num=Math.floor((Math.random()*6));
+           var arry= [
+                  "蝙蝠侠",
+                  "钢铁人", 
+                  "绿巨人",
+                  "蜘蛛侠",
+                  "黑寡妇",
+                  "雷神",
+                  "洛基"
+               ]
+		      var obj={}    
+	       function fun(i){
+	       	     var arr=arry[num]
+		       	if(obj===undefined){
+		       		obj[]=1;
+		       		console.log()
+		       	}else{
+		       		fun()
+		       	}
+	       }
+	       fun(num)
+       }
+	</script>
+</body>
+</html>

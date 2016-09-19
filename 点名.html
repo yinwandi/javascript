@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="点击" class="btn">
+	<script>
+        var obtn=document.querySelector(".btn")
+
+        var arr=[
+                  "蝙蝠侠",
+                  "钢铁人", 
+                  "绿巨人",
+                  "蜘蛛侠",
+                  "黑寡妇",
+                  "雷神",
+                  "洛基"
+                ]
+        var obj={}
+        function fun(){
+        	var nub=Math.floor(Math.random()*7)
+        	
+        	
+        		if(obj[arr[nub]]===undefined){
+        			obj[arr[nub]]=1
+        			console.log(arr[nub])
+        		}else if(getlength(obj)<arr.length){
+        			fun()
+        		}
+        			
+        	
+        }
+        function getlength(x){
+        	var n=0
+        	for(var i in x){
+                n++
+        	}
+        	return n
+        }
+       obtn.onclick=fun
+	</script>
+</body>
+</html>

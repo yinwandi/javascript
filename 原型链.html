@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+       //  function Cat(name,age){
+       //  	this.name=name;
+       //  	this.age=age;
+       //  }
+       //  Cat.prototype.color=function(){
+       //      console.log("我是黑色的")
+       //  }
+       //  function whithcat(){}
+
+       //  whithcat.prototype=new Cat();
+       //  whithcat.prototype.color="whith";
+       //  whithcat.prototype.showcolor=function(){
+       //  	console.log("我是"+this.color+"颜色");
+       //  }
+       //  var whithcat=new whithcat();
+       //  whithcat.showcolor()
+       // console.log( whithcat.color);
+
+
+
+
+       function Father(name){
+       	this.name=name
+       }
+       function Son(name){
+       	this.name=name
+       }
+       Father.prototype.fistName=function(){
+       	console.log("王")
+       }
+       Father.prototype.sayname=function(){
+       	console.log("我是"+this.fistName+this.name)
+       }
+       Father.prototype.beatson=function(){
+       	console.log("打儿子")
+       }
+
+       var father=new Father("中王")
+
+       var son=new Son("晓明")
+
+       Son.prototype= new Father()
+       
+       son.name
+       son.beatson()
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="按钮" class="btn">
+    <input type="button" value="按钮" class="btn">
+    <input type="button" value="按钮" class="btn">
+	<script>
+
+       function $(sel){
+       	   return $.prototype.init(sel);
+       }
+
+       $.prototype={   //对象   每个对象之间用逗号分隔
+	       	init:function(sel){
+	       	   this.dom=document.querySelectorAll(sel);   //通过选择器获取元素  this 是个对象，dom是属性  this.dom是对象的一个属性
+	       	   return this;    //要有返回值，还必须是个对象，因为要返回，dom对象的jque
+	       	},
+	       	click:function(fun){
+	       		for(var i=0;i<this.dom.length;i++){
+	       			this.dom[i].addEventListener("click",fun,false)
+	       		}
+	       	}
+       }
+
+
+       $(".btn").click(function(){
+       	alert("huhuhu")
+       })
+
+
+	</script>
+</body>
+</html>

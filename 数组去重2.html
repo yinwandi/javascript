@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+      var arr=["超人","钢铁侠","雷神","超人","黑寡妇","雷神","绿巨人"]
+
+      function fun(arry){
+      	var obj={}
+        var newarr=[]
+      	for(var i=0;i<arry.length;i++){
+      		if(obj[arry[i]]===undefined){
+      			obj[arry[i]]=1
+      			newarr.push(arry[i])
+      		}
+      	}
+      	return newarr
+      }
+      var s=fun(arr)
+      console.log(s)
+
+
+
+	</script>
+</body>
+</html>

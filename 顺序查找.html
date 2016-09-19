@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script> 
+	//查找输入的索引
+        // var arr=[2,4,5,1,8,6]
+        // function search(array,x){
+        //    for(var i=0;i<array.length;i++){
+        //    	if(array[i]==x){
+        //    		return i;
+        //    	}      //不能写else 因为就判断了第一个数就结束，返回第一个数是不是输入的数
+        //    }
+        //    return -1
+        // }
+
+        // var s=search(arr,3)
+        // console.log(s)
+
+        //找出数组的最大值
+        var arr=[2,4,5,1,8,6]
+        function max(array){
+        	var max=array[0];
+        	for(var i=0;i<array.length;i++){        		
+        		if(array[i]>max){
+        			max=array[i]
+        		}
+        	}
+            return max
+        }
+        var s=max(arr)
+        console.log(s)
+	</script>
+</body>
+</html>

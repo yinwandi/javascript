@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        var arr=["超人","钢铁侠","雷神","超人","黑寡妇","雷神","绿巨人",]
+        function fun(array){
+        	var newarr=[]
+        	var bool=true
+        	for(var i=0;i<array.length;i++){
+        		bool=true
+        		for(var j=0;j<newarr.length;j++){
+        			if(array[i]===newarr[j]){        				
+        				bool=false        			
+        		    }
+                    
+        	    }
+        	    if(bool){
+        	    	newarr.push(array[i])
+        	    }
+        	
+           }
+           return newarr
+        }
+        var result=fun(arr)
+        console.log(result)
+	</script>
+</body>
+</html>

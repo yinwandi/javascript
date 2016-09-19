@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<input type="button" value="按钮" id="but">
+	<script>
+	//用id获取节点
+      // var but1=document.getElementById("but")
+      // but1.onclick=function(){alert("hahah")}    
+    // 用class获取节点
+    var x=document.getElementsByClassName("list")
+    for(var i=0;i<x.length;i++)
+    	x[i].onclick=function(){
+    		alert("hello word")
+    	}
+	</script>
+</body>
+</html>

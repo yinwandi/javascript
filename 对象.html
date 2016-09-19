@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+     var cat={
+           name:"mimi",
+           age:2,
+           sayName:function(){
+           	alert(this.age)
+           },
+           sayHello:function(){
+           	alert("大家好我是"+this.name)
+           },
+           eat:function(food){
+                  alert("我喜欢吃"+food)
+           },
+           cont:function(nub1,nub2,sign){
+           	var result=0;
+           	switch(sign){
+           		case "+" :result=Number(nub1)+Number(nub2);break;
+           		case "-" :result=Number(nub1)-Number(nub2);break;
+           		case "*" :result=Number(nub1)*Number(nub2);break;
+           		case "/" :result=Number(nub1)/Number(nub2);break;
+           	}
+           	alert(result);
+           }
+     }
+    // cat.sayHello();
+    // cat.name="djfi"
+    // cat.sayHello();
+    // cat.eat("牛肉面")
+    cat.cont(1,2,"+")
+	</script>
+</body>
+</html>

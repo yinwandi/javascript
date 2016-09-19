@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span class="sj"></span>:
+	<span class="fen"></span>:
+	<span class="miao"></span>
+	<script src="script/jquery.js"></script>
+	<script>
+
+  function fun(){   //放在函数里让他每秒钟都
+     var today= new Date()
+     var h=today.getHours()
+     var m=today.getMinutes()
+     var s=today.getSeconds()
+     $(".sj").text(h)
+     $(".fen").text(m)
+     $(".miao").text(s)
+     }
+   setInterval(fun,0)  //若从1开始，第一秒的时间是没有时间显示的，所以从0开始，在打开的时候就显示
+	</script>
+</body>
+</html>

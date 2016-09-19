@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="txt">
+	<input type="button" value="猜数字" class="but">
+	<script src="script/jquery.js"></script>
+	<script>
+	var nub=Math.floor(Math.random()*10);
+     $(".but").click(function(){
+     	
+     	var txt=$(".txt").val()
+     	if(nub==txt){
+     		alert("恭喜你答对了")
+     	}
+     	if(nub>txt){
+     		alert("答案大于输入的数")
+     	}
+     	if(nub<txt){
+     		alert("答案小于输入的数")
+     	}
+     })
+
+	</script>
+</body>
+</html>

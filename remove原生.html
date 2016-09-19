@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<div class="box1 box2 box3"></div>
+<body>
+	<script>
+       var obox=document.querySelector("div")
+       function fun(elem,str){ //把obox获取的节点和字符串"box2"传进elem,str
+       	var cname=elem.className;//把elem的class名字给cname;
+       	var arrclassname=cname.split(" ")//把cname变为数组赋给arrclassname
+       	var newarr=[];//建立一个新数组
+       	for(var i=0;i<arrclassname.length;i++){   //遍历
+       		if(arrclassname[i]!=str){   //如果arrclassname不等于传进来的字符串执行下面语句
+       			newarr.push(arrclassname[i])  //在新数组后面追加一个元素，是不等于字符串的其他字符
+       		}
+       	}
+       	var str=newarr.join(" ");   //把新的数组变为字符串并赋值给str
+       	elem.className=str;         //把str的值给elem的class名字
+       }
+       fun(obox,"box2")     //把obox,"box2"作为实参，传给形参
+	</script>
+	
+</body>
+</html>

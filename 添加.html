@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<input type="button" value="添加" class="but">
+	<ul class="list">
+		<li>香蕉</li>
+		<li>苹果</li>
+		<li>鸭梨</li>
+	</ul>
+</head>
+<body>
+	<script src="script/jquery.js"></script>
+	<script>
+      $(".but").click(function(){
+      	var txt=prompt();
+      	if(txt!=null){
+      	var txt1="<li>"+txt+"</li>"
+
+        $(".list").append(txt1)
+          }
+      })
+  
+	</script>
+</body>
+</html>

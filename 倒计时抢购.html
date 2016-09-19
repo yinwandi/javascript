@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+   .box{
+   	width:80px;
+   	height:50px;
+   	background-color: #aaa;
+   }
+
+	</style>
+</head>
+<body>
+	
+	<span class="t"></span>天：
+	<span class="h"></span>小时：
+	<span class="m"></span>分：
+	<span class="s"></span>秒
+	
+	<div class="box">开始抢购</div>
+	<script src="script/jquery.js"></script>
+	<script>
+	var time="2016-7-19 14:16:00";
+	fun();
+    var l= setInterval(fun,1000)
+
+	function fun(){
+		var timeTarget=new Date(time);
+		var qiang=timeTarget.getTime();
+		var day=new Date();
+		var dang=day.getTime();
+		var cha=qiang-dang;
+		var t=Math.floor(cha/(24*60*60*1000));
+		$(".t").text(t);
+		var h=Math.floor((cha%(24*60*60*1000))/(60*60*1000));
+		$(".h").text(h);
+		var m=Math.floor((cha%(60*60*1000))/(60*1000));
+		$(".m").text(m);
+		var s=Math.floor((cha%(1000*60))/1000);
+		$(".s").text(s);
+
+		if(t==0&&h==0&&m==0&&s==0){
+			clearInterval(l);
+			$(".box").css("background-color","red");
+
+		}
+    }
+
+
+	</script>
+</body>
+</html>

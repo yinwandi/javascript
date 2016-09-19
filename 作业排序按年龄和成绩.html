@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/bootstrap.css">
+	<style type="text/css">
+      
+	</style>
+</head>
+<body>
+	<input type="button" value="按年龄排序" class="but1">
+	<input type="button" value="按年龄排序" class="but2">
+	<table class="table table-striped table-hover">
+		<thead>
+			<th>姓名</th>
+			<th>年龄</th>
+			<th>成绩</th>
+		</thead>
+		<tbody></tbody>
+		
+	</table>
+    <script src="script/jquery.js"></script>
+    <script>
+
+        $(".but1").click(function(){
+             age(arr);
+             show(arr);
+        })
+        $(".but2").click(function(){
+             score(arr);
+             show(arr);
+        })
+
+        var arr=[
+	                   {
+		                   	name:"超人",
+		                   	age:20,
+		                   	score:77,
+	                   },
+	                   { 
+		                 	name:"钢铁侠",
+		                   	age:27,
+		                   	score:90,
+	                   },
+	                   {
+		                   	name:"黑寡妇",
+		                   	age:39,
+		                   	score:69,
+	                   },
+	                   {
+		                   	name:"雷神",
+		                   	age:68,
+		                   	score:87,
+	                   },
+	                   {
+		                   	name:"蚁人",
+		                   	age:36,
+		                   	score:81,
+	                   },
+                   ];
+        show(arr);
+
+    	function fun(array,member){
+	    	for(var i=array.length;i>=2;i--){
+	    		for(var j=0;j<i-1;j++){
+	    			if(array[j][member]>array[j+1][member]){
+	                	var k=array[j];
+	                	array[j]=array[j+1];
+	                	array[j+1]=k;
+	                }
+	    		}
+	    	}
+         }      
+    function age(array){
+    	fun(array,"age");
+    }
+    function score(array){
+    	fun(array,"score");
+    }
+
+        function show(array){
+        	$("table tbody").empty();
+	        for(var x in array){
+	         	var $tr=$("<tr>");
+	        	for(var y in array[x]){
+	               var txt=array[x][y];
+	               var $td=$("<td>");
+	               $td.text(txt);
+	               $tr.append($td);
+	        	}
+	        	$("table tbody").append($tr);
+	        }
+        }
+
+        
+
+
+
+
+       
+
+
+    </script>
+</body>
+</html>

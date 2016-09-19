@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span>时间是</span>
+	<span class="day"></span>
+	<span class="day1"></span>年
+	<span class="day2"></span>月
+	<span class="day3"></span>日
+	<span class="day4"></span>时
+	<span class="day5"></span>分
+	<span class="day6"></span>从1970年至今的毫秒数
+	<span class="day7"></span>
+	<script src="script/jquery.js"></script>
+	<script>
+        var today=new Date()
+        var year=today.getFullYear()
+        var date=today.getDate()
+        var month=today.getMonth()
+        var day=today.getDay()
+        var hour=today.getHours()
+        var minutes=today.getMinutes()
+        var time=today.getTime()
+        $(".day").text(today)
+        $(".day1").text(year)
+        $(".day2").text(date)
+        $(".day3").text(month)
+        $(".day4").text(day)
+        $(".day5").text(hour)
+        $(".day6").text(minutes)
+        $(".day7").text(time)
+
+	</script>
+</body>
+</html>

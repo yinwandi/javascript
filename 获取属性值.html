@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	    var obj={
+	    	name:"miao"
+	    }
+        function attr(obj){
+        	 if(arguments.length===2){   //参数为2个的时候
+        	 	return obj[arguments[1]]  //返回第2个参数的属性
+        	 }else if(arguments.length===3){  //参数为2个的时候
+        	 	obj[arguments[1]]=arguments[2]  //把第三个的值赋给第2个参数的对象的属性
+        	 }
+        }
+        attr(obj,"name","hahah")
+        console.log(obj.name)
+       
+
+
+	</script>
+	
+</body>
+</html>

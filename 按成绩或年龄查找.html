@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+            var arr=[
+	                   {
+		                   	name:"超人",
+		                   	age:20,
+		                   	score:77,
+	                   },
+	                   { 
+		                 	name:"钢铁侠",
+		                   	age:27,
+		                   	score:90,
+	                   },
+	                   {
+		                   	name:"黑寡妇",
+		                   	age:39,
+		                   	score:69,
+	                   },
+	                   {
+		                   	name:"雷神",
+		                   	age:68,
+		                   	score:87,
+	                   },
+	                   {
+		                   	name:"蚁人",
+		                   	age:36,
+		                   	score:81,
+	                   },
+                   ]
+        //  function fun(array,member){
+        // 	for(var i=0;i<array.length;i++){
+        //         for(var j=0;j+i<array.length-1;j++){  
+        //             if(array[j][member]>array[j+1][member]){
+        //             	var k=array[j];
+        //             	array[j]=array[j+1];
+        //             	array[j+1]=k;
+        //             }
+        //         }
+        // 	}
+        	
+        // }  
+	       // function age(array){
+	       // 	fun(array,"age");
+	       // }
+	       // function score(array){
+	       // 	fun(array,"score");
+	       // }
+	       // scroe(arr);
+	       // fun(arr,"age")
+	       // console.log(arr);
+
+
+        function fun(array,member){
+        	for(var i=array.length;i>=2;i--){
+        		for(var j=0;j<i-1;j++){
+        			if(array[j][member]>array[j+1][member]){
+                    	var k=array[j];
+                    	array[j]=array[j+1];
+                    	array[j+1]=k;
+                    }
+        		}
+        	}
+        }      
+        function age(array){
+        	fun(array,"age");
+        }
+        function score(array){
+        	fun(array,"score")
+        }
+        age(arr);
+        console.log(arr);
+
+
+
+		</script>
+	</body>
+	</html>	

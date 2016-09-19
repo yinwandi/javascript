@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        // var arr=[1,2,4,6,7,8,9,11,]
+        
+        // function fun(array,x){
+        // 	var low=0
+        //     var up=arr.length-1
+        // 	while(low<=up){
+        // 		var mid=Math.floor((up+low)/2)
+        // 		if(x==array[mid]){
+        // 			return mid
+        // 		}
+        // 	    if(x<array[mid]){
+        // 			up=mid-1
+        // 		}
+        // 	    if(x>array[mid]){
+        // 			low=mid+1
+        // 		}
+        		
+        // 	}
+        // 	return -1
+        	
+        // }
+
+        // var s=fun(arr,8)
+        // console.log(s)
+
+        //用递归做
+         var arr=[1,2,4,6,7,8,9,11,]
+         function fun(array,x){
+         	var low=0
+         	var up=array.length-1
+         	var index=-1
+         	function fun1(){
+         	   var mid=Math.floor((up+low)/2)
+         	   if(low<=up){
+	         	   	if(array[mid]>x){
+	         	   		up=mid-1
+	         	   		fun1()
+	         	   	}else if(array[mid]<x){
+	         	   		low=mid+1
+	         	   		fun1()
+	         	   	}else{
+	         	   		index=mid
+	         	   	}
+         	   }
+         	}
+         	fun1(); 
+            return index;
+         }
+
+
+         var s=fun(arr,4)
+         console.log(s)
+	</script>
+</body>
+</html>

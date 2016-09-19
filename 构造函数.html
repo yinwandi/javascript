@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+        // function Cat(name){
+        // 	this.name=name;
+        // 	this.sayname=function(){
+        // 		console.log("I'm"+this.name)
+        // 	}
+
+        // }
+        // var cat1=new Cat("mimimi")
+        // var cat2=new Cat("yaya")
+        // cat1.sayname()
+        // cat2.sayname()
+
+
+         // var obj={
+         // 	name:"mimi",
+         // 	say:function(){
+         // 		console.log(this.name)
+         // 	}
+         // }
+         // obj.say()
+
+
+         function Cat(name,age){
+         	this.name=name;
+         	this.age=age;
+
+         }
+         Cat.prototype.sayname=function(){
+         	console.log("I'm "+this.name);
+         	console.log(this.age);
+         }
+         var cat=new Cat("hehehe",3)
+         cat.sayname()
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

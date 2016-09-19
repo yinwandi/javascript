@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt1">
+	<input type="text" id="sign">
+	<input type="text" id="txt2">=
+	<input type="text" id="txt3">
+	<input type="button" value="计算" id="result">
+	<script>
+       var text1=document.querySelector("#txt1")
+       var signn=document.querySelector("#sign")
+       var text2=document.querySelector("#txt2")
+       var text3=document.querySelector("#txt3")
+       var but1=document.querySelector("#result")
+       
+       but1.onclick=function(){
+       	var sin=signn.value
+       	switch(sin)
+       	case "+" : re=Number(text1.value)+Number(text2.value)
+       	text3.value=Number(text1.value)+Number(text2.value)
+       }
+
+   
+
+	</script>
+</body>
+</html>

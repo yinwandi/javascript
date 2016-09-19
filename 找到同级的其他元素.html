@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li>1</li>
+		<li class="s">2</li>
+		<li>3</li>
+	</ul>
+	<script>
+       
+       var oli=document.querySelector(".s")
+        var g=fun(oli)
+        console.log(g)
+       function fun(elem){
+       	var narr=[];
+       var sli=elem.parentNode.children;
+       	for(var i=0;i<sli.length;i++){
+       		if(sli[i]!=elem){
+             narr.push(sli[i]);
+            
+       		}
+       		
+       	}
+       	return narr;
+       }
+   
+    
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+        .txt{
+        	color:red;
+        }
+
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮" class="btn">
+    <input type="button" value="按钮" class="btn">
+    <input type="button" value="按钮" class="btn">
+    <h1 class="txt">这是一段测试文字</h1>
+	<!-- <script src ="封装练习.js"></script> -->
+    <script src="script/jquery.js"></script>
+    <script src="js插件.js"></script>
+	
+	<script>
+	    $(".btn").click(function(){
+	    	// var val=$(".btn").attr("value","点击")
+	    	alert("yayayaya")
+	    })
+	    $(".btn").attr("value","点击")
+        
+
+        $(".txt").color("blue")
+
+
+
+
+        // var btn=new $(".btn")
+        // btn.click(function(){
+        // 	alert("mimi")
+        // })
+        // btn.click(function(){
+        // 	console.log("hahaha")
+        // })
+
+	</script>
+</body>
+</html>
